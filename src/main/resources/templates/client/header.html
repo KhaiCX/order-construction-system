@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Header</title>
+    <link th:href="@{/css/home.css}" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" referrerpolicy="no-referrer" />
+</head>
+<body>
+<div th:fragment="header">
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+            <a th:href="@{/home}" class="w3-bar-item w3-button"><span><b>TOÀN AU</b></span></a>
+            <!-- Float links to the right. Hide them on small screens -->
+            <div class="w3-center">
+                <a href="#" class="w3-bar-item w3-button">Công trình</a>
+                <a href="#" class="w3-bar-item w3-button">Thợ</a>
+                <a href="#" class="w3-bar-item w3-button">Đặt hàng</a>
+            </div>
+            <div class="w3-right w3-hide-small">
+
+                <a href="#" class="w3-bar-item w3-button">Đăng ký</a>
+                <a href="#" class="w3-bar-item w3-button">Đăng nhập</a>
+<!--                <button class="w3-bar-item w3-button w3-btn-register">Đăng ký</button>-->
+<!--                <button class="w3-bar-item w3-button w3-btn-login">Đăng nhập</button>-->
+<!--                <button class="w3-bar-item w3-button w3-btn-logout">Đăng xuất</button>-->
+            </div>
+            <nav class="user-menu"><i class="fas fa-user-circle"></i>
+                <ul>
+                    <li><a href="#">Thông tin cá nhân</a></li>
+                    <li><a href="#">Đổi mật khẩu</a></li>
+                    <li><a href="#">Đăng xuất</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar fas fa-user-circle">
+                <a href="#" class="active">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </div>
+    <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+        <img class="w3-image" th:src="@{/image/banner.png}" alt="Architecture" width="1500" height="800" src="">
+        <div class="w3-display-middle w3-margin-top w3-center">
+            <h1 class="w3-xxlarge"><span style="color: yellow !important;" class="w3-hide-small w3-text-light-grey">TOÀN AU</span></h1>
+            <span class="w3-hide-small w3-text-light-grey">CHUYÊN CƠ KHÍ XÂY DỰNG VÀ NỘI THẤT</span><br>
+            <span class="w3-hide-small w3-text-light-grey">NHÀ KHUNG MÁI THÉP - LAN CAN CẦU THANG</span><br>
+            <span class="w3-hide-small w3-text-light-grey">VÁCH HÀNG RÀO - CỬA CỔNG - CỬA CHÍNH CỬA PHỤ</span><br>
+            <span class="w3-hide-small w3-text-light-grey">GIƯỜNG TỦ - BÀN GHẾ - ĐÁ KỆ</span><br>
+            <span class="w3-hide-small w3-text-light-grey">NHẬN ĐẶT HÀNG THEO YÊU CẦU SẢN PHẨM</span><br>
+            <span class="w3-hide-small w3-text-light-grey">SẮT - INOX - NHÔM KÍNH</span><br>
+        </div>
+    </header>
+</div>
+</body>
+</html>
